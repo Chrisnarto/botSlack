@@ -4,7 +4,9 @@
   "description": "Bot Slack",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+	"test": "mocha",
+	"postinstall": "bower install && grunt build"
   },
   "repository": {
     "type": "git",
