@@ -1,0 +1,28 @@
+{
+  "name": "slackbot",
+  "version": "1.0.0",
+  "description": "Bot Slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chrisnarto/botSlack.git"
+  },
+  "dependencies": {
+    "mongoose": "~3.6.11",
+    "express": "^4.7.1",
+    "method-override": "^2.1.2",
+    "body-parser": "^1.5.1"
+  },
+  "keywords": [
+    "slack"
+  ],
+  "author": "Christian Narváez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chrisnarto/botSlack/issues"
+  },
+  "homepage": "https://github.com/Chrisnarto/botSlack#readme"
+}
