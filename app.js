@@ -24,5 +24,6 @@ router.get('/callback', function(req, res) {
 app.use(router);
 
 app.listen(port, function() {
-  console.log("Node server running on http://localhost:3000");
+   var port = server.address().port;
+    console.log("App now running on port", port);
 });
