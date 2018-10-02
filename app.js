@@ -3,6 +3,8 @@ var express = require("express"),
     bodyParser  = require("body-parser"),
     methodOverride = require("method-override");
     mongoose = require('mongoose');
+	
+var Request = require("request");
 
 var port = process.env.PORT || 8080;
 	
@@ -17,9 +19,27 @@ router.get('/', function(req, res) {
 });
 
 router.post('/callback', function(req, res) {
+   let requestBody = req.body;
    
-   console.log(req);
-   res.send(req.body.challenge);
+   if(requestBody.type == "url_verification"){
+	   res.send(requestBody.challenge);
+   }else if(requestBody.event.type == "app_mention"){
+	   Request.post({
+			"headers": {"Authorization":"Bearer xoxb-436617174097-439023760183-45CCU7QEV29LQTjDhrWTRCI0","content-type": "application/json" },
+			"url": "https://slack.com/api/chat.postMessage",
+			"body": JSON.stringify({
+				"text": "Hola <@"+requestBody.event.user+">",
+				"channel": requestBody.event.channel
+			})
+		}, (error, response, body) => {
+			if(error) {
+				return console.dir(error);
+			}
+			console.dir(JSON.parse(body));
+		});
+   }
+   
+   res.send("OK");
 });
 
 
