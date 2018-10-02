@@ -4,9 +4,7 @@
   "description": "Bot Slack",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-	"test": "mocha",
-	"postinstall": "bower install && grunt build"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +19,9 @@
   "keywords": [
     "slack"
   ],
+  "engines": {
+    "node": "8.11.1"
+  },
   "author": "Christian Narváez",
   "license": "ISC",
   "bugs": {
