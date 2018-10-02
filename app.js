@@ -18,8 +18,8 @@ router.get('/', function(req, res) {
 
 router.post('/callback', function(req, res) {
    
-   console.log(req.params);
-   //res.send(req.params.challenge);
+   console.log(req);
+   res.send("Hola");
 });
 
 
