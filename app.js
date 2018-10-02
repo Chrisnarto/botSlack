@@ -21,9 +21,7 @@ router.get('/', function(req, res) {
 router.post('/callback', function(req, res) {
    let requestBody = req.body;
    
-   if(requestBody.type == "url_verification"){
-	   res.send(requestBody.challenge);
-   }else if(requestBody.event.type == "app_mention"){
+   if(requestBody.event.type == "app_mention"){
 	   Request.post({
 			"headers": {"Authorization":"Bearer xoxb-436617174097-439023760183-45CCU7QEV29LQTjDhrWTRCI0","content-type": "application/json" },
 			"url": "https://slack.com/api/chat.postMessage",
