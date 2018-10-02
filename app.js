@@ -24,6 +24,6 @@ router.get('/callback', function(req, res) {
 app.use(router);
 
 app.listen(port, function() {
-   var port = server.address().port;
-    console.log("App now running on port", port);
+   //var port = server.address().port;
+    console.log("App now running on port", 8080);
 });
