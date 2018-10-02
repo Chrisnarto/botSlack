@@ -22,7 +22,7 @@ router.post('/callback', function(req, res) {
    let requestBody = req.body;
    console.log(requestBody.event.type);
    if(requestBody.event.type == "app_mention"){
-	   /*Request.post({
+	   Request.post({
 			"headers": {"Authorization":"Bearer xoxb-436617174097-439023760183-45CCU7QEV29LQTjDhrWTRCI0","content-type": "application/json" },
 			"url": "https://slack.com/api/chat.postMessage",
 			"body": JSON.stringify({
@@ -34,7 +34,7 @@ router.post('/callback', function(req, res) {
 				console.log(error);
 			}
 			console.log(JSON.parse(body));
-		});*/
+		});
    }
    
    res.send("OK");
