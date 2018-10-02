@@ -31,9 +31,9 @@ router.post('/callback', function(req, res) {
 			})
 		}, (error, response, body) => {
 			if(error) {
-				return console.dir(error);
+				console.log(error);
 			}
-			console.dir(JSON.parse(body));
+			console.log(JSON.parse(body));
 		});
    }
    
