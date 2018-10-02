@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
    res.send("Hello World!");
 });
 
-router.get('/callback', function(req, res) {
+router.post('/callback', function(req, res) {
    
    console.log(req.params);
    //res.send(req.params.challenge);
