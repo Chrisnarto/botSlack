@@ -17,7 +17,9 @@ router.get('/', function(req, res) {
 });
 
 router.get('/callback', function(req, res) {
-   res.send("Hello World!");
+   
+   
+   res.send(req.params.challenge);
 });
 
 
