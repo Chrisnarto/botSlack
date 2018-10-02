@@ -4,6 +4,8 @@ var express = require("express"),
     methodOverride = require("method-override");
     mongoose = require('mongoose');
 
+var port = process.env.PORT || 8080;
+	
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
@@ -21,6 +23,6 @@ router.get('/callback', function(req, res) {
 
 app.use(router);
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log("Node server running on http://localhost:3000");
 });
